@@ -4,12 +4,14 @@
   "description": "mebites project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "author": "Eric O'Neill",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.28.2"
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {}
 }
