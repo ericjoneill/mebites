@@ -1,0 +1,15 @@
+{
+  "name": "mebites",
+  "version": "1.0.0",
+  "description": "mebites project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric O'Neill",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.28.2"
+  },
+  "dependencies": {}
+}
