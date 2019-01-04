@@ -1,4 +1,5 @@
 import Search from './models/Search'
+import Recipe from './models/Recipe'
 import * as searchView from './views/searchView'
 import { renderLoader, elements, clearLoader } from './views/base'
  
@@ -48,6 +49,20 @@ elements.searchResPages.addEventListener('click', e => {
         // console.log(goToPage)
     }
 })
+
+/** SEARCH CONTROLLER
+ * 
+ */
+const r = new Recipe(46956)
+r.getRecipe()
+console.log(r)
+
+
+
+
+
+
+
 
 // const search = new Search('pizza')
 // console.log(search)
