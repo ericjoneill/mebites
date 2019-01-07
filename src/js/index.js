@@ -18,7 +18,8 @@ const controlSearch = async () => {
     if (query){
         // 2) New search object and add to state
         state.search = new Search(query)
-
+        // TESTING 
+        window.r = state.recipe;
         // 3) Prepare UI for results
         searchView.clearInput();
         searchView.clearResults();
