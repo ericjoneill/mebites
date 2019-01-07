@@ -45,9 +45,10 @@ export default class Recipe {
 
                 // 2) Remove parenthesis
                 ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
+                
 
                 // 3) Parse ingredients into count and ingredient
-                const arrIng = ingredient.split('')
+                const arrIng = ingredient.split(' ')
                 const unitIndex = arrIng.findIndex(el2 => unitsShort.includes(el2));
 
                 let objIng;
@@ -57,7 +58,19 @@ export default class Recipe {
                     const arrCount = arrIng.slice(0, unitIndex); 
                     // Ex. 4 1/2 cups,  arrCount is [4, 1/2]
                     // Ex 4 cups, arrCount is [4]
-                    
+                    let count;
+                    if (arrCount.length === 1) {
+                        count = eval(arrIng[0].replace('-', '+'));
+                    } else {
+                        count = eval(arrIng.slice(0, unitIndex).join('+'));
+                    }
+
+                    objIng = {
+                        count,
+                        unit: arrIng[unitIndex],
+                        ingredient: arrIng.slice(unitIndex + 1).join(' ')
+                    }
+
 
                 }else if (parseInt(arrIng[0], 10)) {
                     //
