@@ -8,6 +8,14 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '';
     elements.searchResPages.innerHTML = ''
 }
+
+export const highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.results__link'))
+    resultsArr.forEach(el => {
+        el.classList.remove('results__link--active')
+    })
+    document.querySelector(`a[href="#${id}"]`).classList.add('.result__link--active')
+}
 /**
  * Pasta with tomato and spinach
  * acc: 0 / acc + cur.length = 5 / newTitle = ['Pasta']
