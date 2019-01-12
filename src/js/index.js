@@ -46,7 +46,7 @@ const controlSearch = async () => {
         clearLoader()
         searchView.renderResults(state.search.result)
         } catch (err){
-            alert('Smething wrong with the search..')
+            alert('Something wrong with the search..')
             clearLoader()
         }
     }
@@ -172,7 +172,7 @@ const controlLike = () => {
          // Toggle the like button
 
          // Add like to the UI list
-         console.log(state.likes)
+         likesView.renderLike(newLike)
      // User HAS liked current recipe
      } else {
          // Remove like from the state
@@ -180,7 +180,7 @@ const controlLike = () => {
          // Toggle the like button
          likesView.toggleLikeBtn(true)
          // Remove like from the UI list
-         console.log(state.likes)
+         likesView.deleteLike(currentID)
 
      }
      likesView.toggleLikeMenu(state.likes.getNumLikes())
