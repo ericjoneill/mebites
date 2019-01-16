@@ -4,7 +4,7 @@ export const clearRecipe = () => {
     elements.recipe.innerHTML = ''
 }
 const formatCount = count => {
-    // ADD TERNARY FOR 1667
+    // ADD TERNARY FOR 1667, 333
     if (count){
         // count = 2.5 --> 2 1/2
         // count = 0.5 --> 1/2
